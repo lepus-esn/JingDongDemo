@@ -5,16 +5,17 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsw": "tsc",
+    "tsw": "tsc -- -w",
     "build": "webpack --config webpack.config.js",
-    "dev": "tsc",
-    "start": "webpack-dev-server --content-base ./dist"
+    "eslint": "eslint src/**",
+    "start": "webpack-dev-server --content-base ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leroypus/JingDong.git"
   },
   "devDependencies": {
+    "@types/react": "^16.9.35",
     "css-loader": "^3.5.3",
     "eslint": "^7.1.0",
     "style-loader": "^1.2.1",
@@ -29,7 +30,13 @@
   },
   "homepage": "https://github.com/leroypus/JingDong#readme",
   "dependencies": {
+    "@types/react-dom": "^16.9.8",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-loader": "^7.0.5",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0"
   }

@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    entry: './src/index.tsx',
+    entry: './app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
@@ -13,6 +13,19 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.tsx$/,
+                use: [
+                    'babel-loader',
+                    'ts-loader'
+                ]
+            },
+            {
+                test: /\.js$/,
+                use: [
+                    'babel-loader'
+                ]
             }
         ]
     },
@@ -20,5 +33,8 @@ module.exports = {
         contentBase: './dist',  // 根目录， 默认同级
         open: true,  // 自动打开浏览器
         port: 8080   // 端口号
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
     }
 };

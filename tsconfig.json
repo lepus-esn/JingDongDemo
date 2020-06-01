@@ -11,10 +11,11 @@
         "rootDir": "src",
     },
     "include": [
-        "src/**/*"
+        "src/**/*", "app.js"
     ],
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
-    ]
+    ],
+    "esModuleInterop": true
 }
