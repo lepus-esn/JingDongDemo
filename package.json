@@ -8,17 +8,28 @@
     "tsw": "tsc -- -w",
     "build": "webpack --config webpack.config.js",
     "eslint": "eslint src/**",
-    "start": "webpack-dev-server --content-base ./"
+    "start": "webpack-dev-server --content-base ./dist",
+    "clean": "rm -rf node_modules"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leroypus/JingDong.git"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@types/lodash": "^4.14.154",
     "@types/react": "^16.9.35",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "css-loader": "^3.5.3",
     "eslint": "^7.1.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },
@@ -31,13 +42,10 @@
   "homepage": "https://github.com/leroypus/JingDong#readme",
   "dependencies": {
     "@types/react-dom": "^16.9.8",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ts-loader": "^7.0.5",
-    "typescript": "^3.9.3",
-    "webpack": "^4.43.0"
+    "typescript": "^3.9.3"
   }
 }

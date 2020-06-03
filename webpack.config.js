@@ -1,6 +1,7 @@
 const path = require('path');
 module.exports = {
-    entry: './app.js',
+    mode: 'development',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
@@ -8,10 +9,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
             {
@@ -19,12 +21,20 @@ module.exports = {
                 use: [
                     'babel-loader',
                     'ts-loader'
-                ]
+                ],
             },
             {
                 test: /\.js$/,
+                exclude : /node_modules/,
                 use: [
-                    'babel-loader'
+                    {
+                    loader: 'babel-loader',
+                    options:{
+                            presets:[
+                                "@babel/env", "@babel/react"
+                            ]
+                        }
+                    }
                 ]
             }
         ]
@@ -35,6 +45,6 @@ module.exports = {
         port: 8080   // 端口号
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.jsx']
     }
 };
