@@ -42,7 +42,7 @@
   "homepage": "https://github.com/leroypus/JingDong#readme",
   "dependencies": {
     "@types/react-dom": "^16.9.8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ts-loader": "^7.0.5",
